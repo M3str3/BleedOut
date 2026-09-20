@@ -1,0 +1,30 @@
+[package]
+name = "bleedout"
+version = "1.0.0"
+edition = "2021"
+
+[profile.release]
+lto = true
+
+[[bin]]
+name = "bleedlock"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+rsa = "0.9"
+rand = "0.8"
+rand_core = "0.6.4"
+sha2 = "0.10"
+digest = "0.10.7"
+passwords = "3.1.16"
+base64 = "0.20.0"
+suppaftp = "6.0.7"
+url = "2.5"
+dirs = "5"
+glob = "0.3"
+zip = { version = "0.6", default-features = false, features = ["deflate"] }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["shellapi","securitybaseapi", "winbase", "winerror", "fileapi", "errhandlingapi", "wincrypt", "handleapi", "minwindef", "winnt", "processthreadsapi", "debugapi", "sysinfoapi", "winuser", "minwinbase", "synchapi", "windef", "psapi", "winsvc", "consoleapi", "processenv", "wincon"]}
+widestring = "*"
