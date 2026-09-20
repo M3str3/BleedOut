@@ -2,6 +2,9 @@
 
 # BleedOut
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/223a8d72-4556-45c6-8716-4ff18a817852" />
+
+
 **Educational ransomware. No bitcoin. No mercy for your lab VM.**
 
 [![Rust](https://img.shields.io/badge/Rust-Windows-orange)](#)
